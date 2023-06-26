@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cityFragment">
+
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="com.example.weather.presentation.city.CityFragment"
+        android:label="CityFragment" >
+        <action
+            android:id="@+id/action_cityFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.weather.presentation.weather.WeatherFragment"
+        android:label="WeatherFragment" >
+
+        <argument
+            android:name="city"
+            app:argType="com.example.weather.presentation.model.City" />
+
+    </fragment>
+</navigation>
